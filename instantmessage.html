@@ -1,0 +1,280 @@
+ <!DOCTYPE html>
+ <html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            html{
+            text-align: center;
+            font-family: Arial;
+            adjust: fit-content;
+            position: absolute;
+            position: scroll;
+
+        }
+
+        body{
+        background-image: url('./black-white-background-2.jpg');
+        background-color: e6ece8;
+        }
+
+        html, body { margin: 0; padding: 0; }
+        body { height: 100vh; width: 100vw; }
+        *** { box-sizing: border-box; }
+
+        h1{
+          color: #58a378;
+          }
+
+        img{
+          height: 60px;
+          width: 60px;
+        }
+
+        #navbar ul{
+        display: flex;
+        flex-wrap: wrap;
+        line-height: 
+        }
+
+        #navbar li{
+        margin: 10px;
+        list-style-type: none;
+        
+        }
+
+        #navbar a{
+        color: #58a378;
+        }
+       
+
+        a:link { 
+       text-decoration: none;
+     color: #58a378;
+        } 
+        a:visited { 
+        text-decoration: none;
+        color: #58a378; 
+        } 
+        a:hover { 
+        text-decoration: underline;
+        color: #58a378; 
+        } 
+        a:active { 
+        text-decoration: underline;
+        color: #58a378;
+        }
+
+                .search-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+
+        }
+
+        .search-bar {
+            padding: 5px;
+            height: 20px;
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+        }
+
+        .search-button {
+            height: 20px;
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        .header {
+    background-color: #85dfab;
+    color: white;
+    padding: 10px;
+}
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        background-color: #f4f4f4;
+        padding: 10px;
+    }
+
+    .navbar a {
+        text-decoration: none;
+        color: black;
+        padding: 5px 10px;
+    }
+
+        .defaultpfp{ 
+        height: 120px;
+        width: 120px;
+        border: 1px solid grey;
+        border-radius: 50%;
+        margin: 1px;
+        float: right;
+        background-image: url('https://i.pinimg.com/474x/4f/14/38/4f1438203ed65f2abbf255f335db60fc.jpg');
+        background-size: cover;
+
+        }
+
+        #profileinfo{
+
+
+        }
+
+        * {
+        box-sizing: border-box;
+        }
+
+        main{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        }
+
+        .column1{
+        float: left;
+        width: 300px;
+        padding: 30px;
+        margin: 5px;
+        height: 500px;
+        background-color: white;
+        color: black;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        }
+
+        
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+
+.flex-container {
+          display: flex;
+          flex-direction: row;
+        }
+
+.row: after{
+        content: "";
+        display: table;
+        clear: both;
+        }
+
+        .backsplash {
+            float: left;
+            background-color: #f1f1f1;
+            width: 95%;
+            height: 200px;
+            padding: 10px;
+            margin: 30px;
+            border-radius: 5px; 
+            display: flex;
+            justify-content: center;
+
+        }
+        
+
+
+        .column2{
+        float: left;
+        width: 300px;
+        margin: 5px;
+        padding: 10px;
+        height: 500px;
+        background-color: white;
+        }
+
+        .column3{
+        float: left;
+        width: 250px;
+        margin: 5px;
+        padding: 10px;
+        height: 500px;
+        background-color: white;
+        }
+
+
+        
+        </style>
+    <body>
+                
+        <div id="navbar" >
+                    <div class="header"><h1><b>U-vite<img src="renewedlogo.jpg"></b></h1></div>
+                    <div class="search-container">
+                
+                <ul>
+                    
+                    <li><a href="">Home</a></li>
+                    <li><a href="">My Page</a></li>
+                    <li><a href="">Connect</a></li>
+                    <li><a href="">Chat</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Settings</a></li>
+                    <input type="text" class="search-bar" placeholder="Search...">
+                <button class="search-button">Search</button>
+                </ul> 
+        </div>
+     
+     
+      
+
+      <div class="flex-container">
+      <div class="backsplash">
+      </div></div>
+      <main>
+    <div class="row">
+             
+          <div class="column1">
+        <div id="profileinfo">
+          <div class="defaultpfp">
+
+          </div>
+
+              <form action="/action_page.php" method="get">
+              <label for="fname"></label>
+              <br>
+              <label for="lname"></label>
+              </form>
+              <button style="width: 100%;">Edit Profile</button>
+              <p>Following: </p>
+              <br>
+              <p>Followers:</p><br>
+              <br>
+              <h2>New Users</h2>
+              
+
+        </div>
+      
+      </div>
+      <div class="column2"> 
+      </div>
+        <h2>Activity Feed</h2>
+        <div class="createapost" style="display: flex; justify-content: center">
+          <div class="defaultpfp" style="width: 30px; height: 30px; float: left; margin: 5px;"></div>
+          <form action="post.php" method="post">
+          <input type="text" placeholder="What's on your mind?">
+          <input type="submit" class="submitBtn" value="Post" style></form>
+        </div>
+
+      </div>
+
+      <div class="column3">
+        <h1>Column 3</h1>
+        <div></div>
+        <div></div>
+      </div>
+
+
+    </div>
+  </main>
+
+
+
+    </body>
+    <footer>
+
+    </footer>
+ </html>

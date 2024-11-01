@@ -1,0 +1,133 @@
+ <!DOCTYPE html>
+ <html>
+    <head>
+        <link rel="stylesheet" type="styles.css">
+        <style>
+            * {
+            box-sizing: border-box;
+            }
+        html{
+          font-family: monospace;
+          max-width: 100%;
+          object-fit: contain;
+          position: absolute;
+          position: scroll;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 18px;
+          
+          }
+
+          body{
+            text-align: center;
+            background-color: #85dfab;
+            color: #696969;
+          }
+
+        h1{
+          color: #58a378;
+          }
+
+        img{
+          height: 60px;
+          width: 60px;
+        }
+
+            .button {
+  background-color: #ddd;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+}
+
+.button:hover {
+  background-color: #f1f1f1;
+}
+        </style>
+    <header>
+        <h1>U-vite Dating<img src="./renewedlogo.jpg"></h1>
+    </header>
+
+    </head>
+    <title>U-vite</title>
+    <body>
+        <h2>Let's get to know you first...</h2>
+        <p>This section helps double your chances of finding a match by including some fun facts about yourself and choosing your preferences!</p>
+        <div class>
+            <form>
+                <label><p>Describe your sexual orientation: </p>
+                    <input name="straight" id="straight" type="checkbox">straight
+                    <br>
+                    <input name="gay" id="gay" type="checkbox">gay
+                    <br>
+                    <input name="lesbian" id="lesbian" type="checkbox">lesbian
+                    <br>
+                    <input name="bi" id="bi" type="checkbox">bisexual
+                    <br>
+                </label><br>
+                <label>What age range do you prefer?
+                            <div class="double_range_slider_box">
+                                <div class="double_range_slider">
+                                    <span class="range_track" id="range_track"></span>
+                            
+                                    <input type="range" class="min" min="18" max="100" value="18" step="0" />
+                                    <p id="demo"></p>
+                                    <input type="range" class="max" min="18" max="100" value="90" step="0" />
+                                    <p id="demo"></p>
+                                    <div class="minvalue"></div>
+                                    <div class="maxvalue"></div>
+                                </div>
+                </label><br>
+                <label>
+                    <p>What are your interests?</p>
+                        <button class="button">Watching Netflix</button>
+                        <button class="button">Exersice</button>
+                        <button class="button">Cooking</button>
+                        <button class="button">Hiking</button>
+                        <button class="button">Studying</button>
+                        <button class="button">Jogging</button>
+                        <button class="button">MMA</button>
+                        <button class="button">Martial Arts</button>
+                        <button class="button">Artist</button>
+                        <button class="button">Music Lover</button>
+                        <button class="button">Guitar</button>
+                        <button class="button">Pianist</button>
+                        <button class="button">Acting</button>
+                        <button class="button">Dancing</button>
+                        <button class="button">DJing</button>
+                        <button class="button">Anime</button>
+                        <button class="button">Video Games</button>
+                        <button class="button">Kpop</button>
+                </label><br>
+                <label><p>What are your favorite movie genres?</p>
+                    <button class="button">Romance</button>
+                    <button class="button">Comedies</button>
+                    <button class="button">Action</button>
+                    <button class="button">Sci-fi</button>
+                    <button class="button">Horror</button>
+                    <button class="button">Drama</button>
+                    <button class="button">Disney</button>
+                    <button class="button">Mystery</button>
+                    <button><input type="button">Skip</button>
+                </label>
+            </form>
+        </div>
+
+    <script>
+        var slider = document.getElementById("least");
+        var output = document.getElementById("max");
+        output.innerHTML = slider.value;
+
+        slider.oninput = function() {
+        output.innerHTML = this.value;
+        }
+    </script>
+    </body>
+ </html>

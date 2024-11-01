@@ -1,0 +1,162 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>Welcome to U-vite!</title>
+
+        <!-- Load external CSS styles -->
+        <link rel="stylesheet" href="styles.css">
+        <style>
+          * {box-sizing: border-box}
+
+          html{
+          font-family: monospace;
+          adjust: fit-content;
+          position: absolute;
+          position: scroll;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 18px;
+          
+          }
+
+          body{
+          background-color: #85dfab;
+          text-align: center;
+          }
+        
+        h1{
+          color: #58a378;
+          }
+
+        img{
+          height: 60px;
+          width: 60px;
+        }
+
+          .signup{
+            text-align: center;
+            height: 550px;
+            width: 450px;
+            border: solid 1px #58a378;
+            margin: 8px;
+            border-radius: 12px 12px 12px 12px;
+            background-color: #58a378;
+            color: white;
+          }
+
+          .clearfix{
+          line-height: -10px;
+          padding-left: 50%;
+          }
+
+          button{
+          color: white;
+          font-size: 18px;
+          background-color: black;
+          border-radius: 4px 4px 4px 4px;
+          }
+
+          .signupbtn{
+          float: left;
+          }
+
+          a{
+          color: white;
+          text-decoration : none;
+          font-size: 18px;
+          }
+
+          label{
+          font-size: 18px;
+          }
+
+          
+
+        </style>
+    </head>
+    <body>
+    <header>
+      <h1><b>Welcome to U-vite Dating<img src="renewedlogo.jpg"></b></h1>
+    </header>
+    <main>
+        <div class="signup">
+          <form action="signup.php" name="signform" class="form" method="post">
+            <h3>Sign-up to join!</h3>
+            <label>First name</label>
+            <input placeholder="First name" required id="name" title="Please enter your first name.">
+            <br><br>
+            <label>Last name</label>
+            <input placeholder="Last name" required id="name" title="Please enter your last name.">
+            <br><br>
+            <label>Enter your birthday
+              <input type="date" required title="Please enter your birthday.">
+            </label>
+            <br><br>
+            <label>Enter your email</label>
+            <input placeholder="Email" id="email" required>
+            <br><br>
+            <label>Create a user</label>
+            <input placeholder="Username" required>
+            <br><br>
+            <label>Create your password</label>
+            <input placeholder="Password" id="password" required>
+            <br>
+            <br><br>
+            <label>
+              <input type="radio">Male
+              <input type="radio">Female
+              <input type="radio">Other
+            </label>
+            <br><br>
+                <p>By creating an account you agree to our <a href="./terms-and-conditions.html" style="color:dodgerblue";>Terms & Privacy</a>.</p>
+        </div>
+          <div class="clearfix">
+                    <button type="submit" class="signupbtn" onclick="document.getElementById('demo').innerHTML=required()"><a href="#">I'm In!</a></button>
+          </div>
+    </form>
+    <br>
+    <p style="text-align:center;">Already have an account? <a href="#" style="color: dodgerblue;">Login</a></p>
+    </main>
+        
+
+    <script>
+      function validateForm() {
+  // Get form elements
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  // Validation rules
+  if (name === "") {
+    alert("Please enter your name.");
+    return false;
+  }
+
+  if (email === "" || !validateEmail(email)) {
+    alert("Please enter a valid email address.");
+    return false;
+  }
+
+  if (password.length < 6) {
+    alert("Password must be at least 6 characters long.");
+    return false;
+  }
+
+  // If all validation passes, allow form submission
+  return true;
+}
+
+function validateEmail(email) {
+  // Simple email validation using regular expression
+  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return re.test(email);
+}
+    </script>
+
+    </body>
+
+</html>
